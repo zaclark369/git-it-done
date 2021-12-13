@@ -1,7 +1,7 @@
-var userFormEl = Document.querySelector("#user-form");
-var nameInputEl = Document.querySelector("#username");
-var repoContainerEl = Document.querySelector("#repos-container");
-var repoSearchTerm = Document.querySelector("#repo-search-term");
+var userFormEl = document.querySelector("#user-form");
+var nameInputEl = document.querySelector("#username");
+var repoContainerEl = document.querySelector("#repos-container");
+var repoSearchTerm = document.querySelector("#repo-search-term");
 
 var getUserRepos = function (user) {
   var apiUrl = "https://api.github.com/users/" + user + "/repos";
@@ -41,7 +41,7 @@ var displayRepos = function (repos, searchTerm) {
         return;
     }
    for (var i = 0; i < repos.length; i++) {
-       var repoName - repos[i].login + "/" + repos[i].name;
+       var repoName = repos[i].login + "/" + repos[i].name;
 
        var repoEl = document.createElement("div");
        repoEl.classList = "list-item flex-row justify-space-between align-center";
